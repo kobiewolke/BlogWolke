@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Blog.DAL/bin/Debug
+/Blog.DAL/obj/Debug
+/Blog.DTO/bin/Debug
+/Blog.DTO/obj
+/Blog.Entities/obj
+/Blog.Entities/bin/Debug
+/BlogFronEnd/obj/Debug
+/BlogTest/bin
+/BlogTest/obj/Debug
+/BlogFronEnd/bin
+/.vs

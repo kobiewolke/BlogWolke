@@ -1,0 +1,30 @@
+﻿@model Blog.DTO.ArticleDTO
+@{
+    ViewBag.Title = "ReadArticle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row articleHeader">
+    <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
+        <img src="@Model.ImageURL" style="width:100%"/>
+    </div>
+    <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
+        <div class="row">
+            <h2>@Model.Title</h2>
+            <br />
+            Date: @Model.Created.ToString("dd MMM yyyy")                        
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-1 col-sm-1 col-md-1 col-xs-1">
+        &nbsp;
+    </div>
+    <div class="col-lg-10 col-sm-10 col-md-10 col-xs-10">
+        @Model.Body
+    </div>
+    <div class="col-lg-1 col-sm-1 col-md-1 col-xs-1">
+        &nbsp;
+    </div>
+</div>
+
