@@ -1,0 +1,16 @@
+﻿@model Blog.DTO.ArticleDTO
+<div class="row articleContainer">
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="@Model.ImageURL" width="100" />
+            </div>
+            <div class="col-lg-8">
+                <p>
+                    @Model.Description
+                </p>
+                @Html.ActionLink("Read more...", "ReadArticle", "Blog", new { id = Model.ID }, null);
+            </div>
+        </div>
+    </div>
+</div>

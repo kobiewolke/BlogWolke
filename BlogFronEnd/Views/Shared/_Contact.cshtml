@@ -1,0 +1,60 @@
+﻿@model Blog.DTO.ContactDTO
+
+<div id="dialog-modal" style="overflow:hidden">
+    @using (Ajax.BeginForm("Index", "Contact", new AjaxOptions { UpdateTargetId = "ID", HttpMethod = "POST", OnSuccess="onSuccess" }))
+    {
+        <div class="row" style="padding-left:40px; padding-top: 20px">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor(m => m.Name)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        @Html.TextBoxFor(m => m.Name, new { Style = "width:100%" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor(m => m.EmailAddress)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        @Html.TextBoxFor(m => m.EmailAddress, new { Style = "width:100%" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor(m => m.ContactNumber)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        @Html.TextBoxFor(m => m.ContactNumber, new { Style = "width:100%" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor(m => m.Message)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        @Html.TextAreaFor(m => m.Message, new { Style = "width:100%" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center">
+                <input type="submit" value="Store" style="background-color:#272727; color:white;" />
+            </div>
+        </div>
+    }
+</div>
